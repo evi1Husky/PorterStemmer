@@ -1,6 +1,6 @@
 export class PorterStemmer {
   constructor() 
-  {  this.b = [];
+  {  this.b = new Array();
      this.i = 0;
      this.j = 0;
      this.k = 0;
