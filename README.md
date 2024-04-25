@@ -9,6 +9,10 @@ Porter stemmer algorithm written in JavaScript.
 
 ## How to use
 
+```sh
+npm i porter-stemmer-js
+```
+
 ```javascript
 import { PorterStemmer } from "porter-stemmer"
 
