@@ -1,0 +1,40 @@
+{
+  "name": "porter-stemmer",
+  "version": "1.0.0",
+  "description": "A Porter Stemmer implementation written in Javascript.",
+  "main": "src/PorterStemmer.js",
+  "type": "module",
+  "keywords": [
+    "porter",
+    "stemmer",
+    "nlp",
+    "language",
+    "processing"
+  ],
+  "exports": {
+    "import": "./src/PorterStemmer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evi1Husky/PorterStemmer.git"
+  },
+  "scripts": {
+    "test": "clear && node test/test.js"
+  },
+  "author": "Evi1Husky",
+  "license": "MIT",
+  "files": [
+    "src",
+    "test",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "bugs": {
+    "url": "https://github.com/evi1Husky/PorterStemmer/issues"
+  },
+  "homepage": "https://github.com/evi1Husky/PorterStemmer#readme"
+}
