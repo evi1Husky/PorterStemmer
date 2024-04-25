@@ -1,5 +1,5 @@
 {
-  "name": "porter-stemmer",
+  "name": "porter-stemmer-js",
   "version": "1.0.0",
   "description": "A Porter Stemmer implementation written in Javascript.",
   "main": "src/PorterStemmer.js",
