@@ -1,8 +1,8 @@
 {
   "name": "porter-stemmer-js",
-  "version": "1.0.2",
-  "description": "A Porter Stemmer implementation written in Javascript.",
-  "main": "src/PorterStemmer.js",
+  "version": "1.1.0",
+  "description": "Very fast Porter Stemmer implementation written in Javascript.",
+  "main": "./src/PorterStemmer.js",
   "type": "module",
   "keywords": [
     "porter",
@@ -12,7 +12,8 @@
     "processing"
   ],
   "exports": {
-    "import": "./src/PorterStemmer.js"
+    "import": "./src/PorterStemmer.js",
+    "require": "./src/PorterStemmer.cjs"
   },
   "repository": {
     "type": "git",
@@ -31,10 +32,7 @@
     "package.json"
   ],
   "directories": {
-    "test": "test"
+    "test": "./test"
   },
-  "bugs": {
-    "url": "https://github.com/evi1Husky/PorterStemmer/issues"
-  },
-  "homepage": "https://github.com/evi1Husky/PorterStemmer#readme"
+  "homepage": "https://github.com/evi1Husky/PorterStemmer#readme",
 }

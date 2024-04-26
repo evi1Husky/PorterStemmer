@@ -1,11 +1,15 @@
 # Porter Stemmer
 
-Porter stemmer algorithm written in JavaScript.
+Martin Porter stemmer algorithm written in JavaScript.
+Reference: https://tartarus.org/martin/PorterStemmer/
 
 ## Features
 
-- Follows canonical imperative implementation 100%.
-- Optimized for performance.
+- Follows canonical imperative implementation with char buffer and index pointers for 
+  the best performance.
+- Processes the 23k words test suit in 15ms.
+- It's just one big function that takes string and returns string, no side effects, modules or classes.
+- Both ESM and CJS exports.
 
 ## How to use
 
@@ -14,10 +18,13 @@ npm i porter-stemmer-js
 ```
 
 ```javascript
-import { PorterStemmer } from "porter-stemmer"
+import { PorterStemmer } from "porter-stemmer-js"
 
-const stemmer = new PorterStemmer();
-const stemmedWord = stemmer.stem("running");
+// the word to stem must be lower case with no trailing spaces or symbols
+
+const stemmedWord = PorterStemmer("running");
+
+console.log(stemmedWord) // "run"
 ```
 # License
 

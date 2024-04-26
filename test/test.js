@@ -2,16 +2,14 @@ import { PorterStemmer } from "../src/PorterStemmer.js";
 import { voc } from "./voc.js";
 import { output } from "./output.js";
 
-function test() {
-  const wordsToTest = voc.split("\n").map(x => x.trim());
-  const expected = output.split("\n").map(x => x.trim());
-
-  const stemmer = new PorterStemmer();
+const main = () => {
+  let wordsToTest = voc.split("\n").map(x => x.trim());
+  let expected = output.split("\n").map(x => x.trim());
 
   let passed = 0;
 
   for (let i = 0; i < wordsToTest.length - 1; i++) {
-    const res = stemmer.stem(wordsToTest[i]);
+    const res = PorterStemmer(wordsToTest[i]);
     console.log("exp: " + expected[i], "in: " + wordsToTest[i], "=> out:", res);
     if (res !== expected[i]) {
       console.error("fail", wordsToTest[i], i);
@@ -22,13 +20,21 @@ function test() {
 
   console.log("\npassed " + passed + "/" + (wordsToTest.length - 1));
 
-  const t1 = performance.now();
-  for (let i = 0; i < wordsToTest.length - 1; i++) {
-    const res = stemmer.stem(wordsToTest[i]);
+  const perormanceTest = () => {
+    wordsToTest = wordsToTest.map(x => x).sort((a, b) => a - b);
+    wordsToTest.push("");
+    const t1 = performance.now();
+    for (let i = 0; i < wordsToTest.length - 1; i++) {
+      const res = PorterStemmer(wordsToTest[i]);
+    }
+    const t2 = performance.now();
+    console.log((t2 - t1).toFixed(2) + "ms");
   }
-  const t2 = performance.now();
-  console.log("in: " + (t2 - t1).toFixed(3) + "ms");
+
+  for (let i = 0; i < 20; i++) {
+    perormanceTest();
+  }
 }
 
-test();
+main();
 
