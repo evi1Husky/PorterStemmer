@@ -1,15 +1,27 @@
 {
   "name": "porter-stemmer-js",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Very fast Porter Stemmer implementation written in Javascript.",
   "main": "./src/PorterStemmer.js",
+  "types": "./src/PorterStemmer.d.ts",
   "type": "module",
   "keywords": [
     "porter",
     "stemmer",
     "nlp",
-    "language",
-    "processing"
+    "text-analysis",
+    "language-processing",
+    "linguistics",
+    "information-retrieval",
+    "tokenization",
+    "algorithms",
+    "text-search",
+    "text-mining",
+    "word-stemming",
+    "javascript-nlp",
+    "text-preprocessing",
+    "fast-stemming",
+    "machine-learning"
   ],
   "exports": {
     "import": "./src/PorterStemmer.js",
