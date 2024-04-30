@@ -249,8 +249,5 @@ const PorterStemmer = (word) => {
   return out; 
 }
 
-export { PorterStemmer }
-
-
 module.exports = PorterStemmer;
 
